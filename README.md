@@ -1,8 +1,6 @@
 # antsquaretask
 Simple app to display small business data along with there social presence such as facebook, yelp and twitter. Using antsquare API
 
-Time spent: **12-15** hours spent in total
-
 ## User Stories
 
 * [ ] Grid view of picture for 1st tab with data from the api. 
