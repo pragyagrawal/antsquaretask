@@ -1,8 +1,10 @@
 package com.example.pragyaagrawal.antsquaretask.activities;
 
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
+import android.support.v4.graphics.drawable.DrawableCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
@@ -55,6 +57,7 @@ public class MainActivity extends AppCompatActivity implements PhotosFragment.On
 
         fetchUserProfileFromServer();
     }
+    private int[] tabImages = {R.drawable.photos_icon,R.drawable.yelp_icon,R.drawable.facebook_icon, R.drawable.twitter_icon};
 
     private void setViewPager() {
         ViewPager viewPager = (ViewPager) findViewById(R.id.vpPager);
@@ -69,6 +72,39 @@ public class MainActivity extends AppCompatActivity implements PhotosFragment.On
         tabLayout.setupWithViewPager(viewPager);
         tabLayout.setTabMode(TabLayout.MODE_FIXED);
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
+
+        for (int i = 0; i < tabLayout.getTabCount(); i++) {
+            TabLayout.Tab tab = tabLayout.getTabAt(i);
+            tab.setCustomView(R.layout.view_home_tab);
+
+            Drawable icon = getResources().getDrawable(tabImages[i]);
+            changeDrawableTint(icon,R.color.primaryBlack);
+            tab.setIcon(icon);
+        }
+
+        changeDrawableTint(tabLayout.getTabAt(0).getIcon(),R.color.colorPrimaryDark);
+
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                changeDrawableTint(tab.getIcon(),R.color.colorPrimaryDark);
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+                changeDrawableTint(tab.getIcon(),R.color.primaryBlack);
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
+    }
+
+    private void changeDrawableTint(Drawable icon, int color){
+        icon = DrawableCompat.wrap(icon);
+        DrawableCompat.setTint(icon,getResources().getColor(color));
     }
 
     private void fetchUserProfileFromServer(){
