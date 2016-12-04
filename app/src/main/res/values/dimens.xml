@@ -1,0 +1,19 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="store_icon_size">100dp</dimen>
+    <dimen name="store_icon_margin">8dp</dimen>
+    <dimen name="store_name_margin_top">12dp</dimen>
+    <dimen name="store_name_text_size">20sp</dimen>
+    <dimen name="store_likes_margin_top">12dp</dimen>
+    <dimen name="store_likes_label_margin_top">12dp</dimen>
+    <dimen name="store_likes_label_margin_left">12dp</dimen>
+    <dimen name="store_followers_margin_top">12dp</dimen>
+    <dimen name="store_followers_margin_left">24dp</dimen>
+    <dimen name="store_followers_margin_label">12dp</dimen>
+    <dimen name="store_username_margin_top">12dp</dimen>
+    <dimen name="store_details_margin_top">12dp</dimen>
+    <dimen name="product_image_height">100dp</dimen>
+    <dimen name="product_image_padding">2dp</dimen>
+</resources>

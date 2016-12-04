@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.pragyaagrawal.antsquaretask.activities.MainActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivUserImage"
+        android:layout_width="@dimen/store_icon_size"
+        android:layout_height="@dimen/store_icon_size"
+        android:layout_margin="@dimen/store_icon_margin"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/tvUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/ivUserImage"
+        tools:text="Starbucks"
+        android:layout_marginTop="@dimen/store_name_margin_top"
+        android:textSize="@dimen/store_name_text_size"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvLikes"
+        android:layout_marginTop="@dimen/store_likes_margin_top"
+        android:layout_below="@id/tvUserName"
+        tools:text="100K"
+        android:textStyle="bold"
+        android:layout_toEndOf="@id/ivUserImage"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvLikesLabel"
+        android:layout_marginTop="@dimen/store_likes_label_margin_top"
+        android:text="@string/likes"
+        android:layout_marginStart="@dimen/store_likes_label_margin_left"
+        android:layout_below="@id/tvUserName"
+        android:layout_toEndOf="@id/tvLikes"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvFollowers"
+        android:layout_marginTop="@dimen/store_followers_margin_top"
+        android:layout_marginStart="@dimen/store_followers_margin_left"
+        tools:text="100K"
+        android:textStyle="bold"
+        android:layout_below="@id/tvUserName"
+        android:layout_toEndOf="@id/tvLikesLabel"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvFollowersLabel"
+        android:layout_marginTop="@dimen/store_followers_margin_label"
+        android:layout_marginStart="@dimen/store_followers_margin_label"
+        android:text="@string/followers"
+        android:layout_below="@id/tvUserName"
+        android:layout_toEndOf="@id/tvFollowers"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvUserId"
+        android:layout_toEndOf="@id/ivUserImage"
+        tools:text="startbucks"
+        android:layout_below="@id/tvLikes"
+        android:layout_marginTop="@dimen/store_username_margin_top"
+        android:textColor="@color/colorAccent"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/store_details_margin_top"
+        android:layout_below="@id/ivUserImage">
+
+        <include layout="@layout/view_pager_layout" />
+    </RelativeLayout>
+</RelativeLayout>

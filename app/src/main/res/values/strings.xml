@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Antsquare</string>
+
+    <string name="product_image_content_desc">Product Image</string>
+    <string name="likes">Likes</string>
+    <string name="followers">Followers</string>
+</resources>
